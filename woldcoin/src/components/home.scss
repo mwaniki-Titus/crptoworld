@@ -1,0 +1,74 @@
+.home {
+    .home__balance {
+        display: flex;
+        flex-direction: row;
+        margin: 10px;
+        align-items: center;
+        justify-content: space-evenly;
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+
+    }
+
+    .home__actions {
+        display: flex;
+        flex-direction: row;
+        margin: 10px;
+        align-items: center;
+        justify-content: space-evenly;
+        
+    }
+
+    .home__currencies {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        width: 100vh;
+        
+        // margin-left: 50vh;
+        // border-radius: 10px;
+        background-color: aliceblue;
+       
+        .h2{
+            color:white;
+        }
+        .home__currency1{
+            background-color: aqua;
+            border-radius: 10px;
+
+        }
+        .home__currency2{
+            background-color: whitesmoke;
+            border-radius: 10px;
+        }
+        .home__currency3{
+            background-color: black;
+            border-radius: 10px;
+            height: 40vh;
+            
+        }
+
+
+        .home__currency {
+            text-align: center;
+            margin-top: 20px;
+            
+            
+
+            img {
+                width: 50px; 
+                height: 50px; 
+                margin-top: 10px;
+            }
+
+            .home__currency-details {
+                margin-top: 10px;
+
+                p {
+                    margin-bottom: 5px;
+                }
+                
+            }
+        }
+    }
+}

@@ -1,0 +1,14 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: aqua;
+    margin-left: 50vh;
+    width: 50%;
+
+    img {
+        width: 20px; 
+        height: auto; 
+        margin-right: 10px;
+    }
+}

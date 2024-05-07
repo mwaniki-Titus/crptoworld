@@ -1,0 +1,48 @@
+.profile {
+    &__buttons {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-bottom: 20px;
+
+        button {
+            margin: 0 10px;
+        }
+    }
+
+    &__verification {
+        text-align: center;
+        background-color: aliceblue;
+        width: 50%;
+        justify-content: center;
+        margin-left: 50vh;
+
+        img {
+            width: 50px; /* Adjust as needed */
+            height: 50px; /* Adjust as needed */
+        }
+
+        h2 {
+            margin-top: 20px;
+        }
+
+        p {
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+
+        &__currency {
+            display: flex;
+            justify-content: space-between;
+
+            div {
+                text-align: center;
+                margin-top: 20px;
+            }
+
+            button {
+                /* Add button styles */
+            }
+        }
+    }
+}
