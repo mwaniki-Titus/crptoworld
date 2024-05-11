@@ -1,0 +1,20 @@
+CREATE DATABASE worldcoin
+USE worldcoin
+
+CREATE TABLE tbl_user (
+    UserID INT IDENTITY(1,1) PRIMARY KEY,
+    Username VARCHAR(255) NOT NULL,
+    Password VARCHAR(255) NOT NULL,
+    Email VARCHAR(255) NOT NULL,
+    Balance DECIMAL(18, 2) NOT NULL DEFAULT 0,
+    CreatedAt DATETIME DEFAULT GETDATE()
+);
+
+CREATE TABLE transactions (
+    TransactionID BIGINT IDENTITY(1,1) PRIMARY KEY,
+    SenderID BIGINT NOT NULL,
+    ReceiverID BIGINT NOT NULL,
+    Amount DECIMAL(18, 2) NOT NULL,
+    Timestamp DATETIME DEFAULT GETDATE()
+);
+
