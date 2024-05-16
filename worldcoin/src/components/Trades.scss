@@ -1,0 +1,21 @@
+.trades-container {
+    padding: 20px;
+    margin-top: 50px;
+}
+
+.no-data {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.no-data img {
+    width: 544px; 
+    height: 100px; 
+    margin-bottom: 10px;
+}
+
+.no-data p {
+    color: #777;
+}

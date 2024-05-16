@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree&display=swap');
+
+.ds-dashboard-container {
+  font-family: 'Figtree', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+
+  max-width: 548px;
+  margin: 0 auto;
+  padding-top: 20px;
+  margin-top: 70px;
+  margin-bottom: 50px;
+}
+
+.ds-dashboard {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.ds-dashboard-card {
+  width: calc(100% - 40px);
+  margin: 10px;
+  padding: 10px;
+  max-height: 80px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  
+}
+
+.ds-dashboard-card:hover {
+  transform: translateY(-2px);
+}
+
+.ds-dashboard-card h2 {
+  margin-top: 15px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.ds-dashboard-card p {
+  color: #666;
+}
+
+.ds-circle-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.ds-circle-icon img {
+  width: 40px;
+}
+
+.ds-circle-icon.black-bg {
+  background-color: #000;
+  &.blue-bg {
+    background-color: blue;
+  }
+  
+}
+
+.ds-circle-icon.blue-bg {
+  background-color: #88b5e1;
+}
+
+.ds-circle-icon.green-bg {
+  background-color: #00cc66;
+}
+
+.ds-circle-icon.purple-bg {
+  background-color: #c1e6c3;
+}
+
+.ds-circle-icon.red-bg {
+  background-color: #f7e7e7;
+}
+
+.ds-dashboard-card.black-bg {
+  background-color: #000;
+  color: #fff;
+}
+
+.ds-dashboard-card:not(.black-bg) {
+  background-color: whitesmoke;
+}
+
+.ds-dashboard-card .greater-icon {
+  width: 30px;
+  margin-left: auto;
+}
+
+.ds-dashboard-card.blue-bg {
+  background-color: rgb(68 59 240);
+  --tw-bg-opacity: 1;
+  color:white;
+}
+

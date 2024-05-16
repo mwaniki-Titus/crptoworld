@@ -1,0 +1,61 @@
+.grants-page {
+    padding-top: 20px;
+  }
+  
+  h3{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .grants-container {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .grants-card {
+    background-color: whitesmoke;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    width: 400px; /* Set the width according to your preference */
+    cursor: pointer; /* Make the card clickable */
+  }
+  
+  .grants-card:hover {
+    background-color: #f0f0f0; /* Change background color on hover */
+  }
+  
+  .grants-card .badge {
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+  }
+  
+  .grants-card .grant-details {
+    flex-grow: 1;
+  }
+  
+  .grants-card .grant-details p {
+    margin: 0;
+  }
+  
+  .bank-card .grant-name {
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  .grants-card .grant-date {
+    font-size: 14px;
+    color: #333; /* Dark color for the date */
+  }
+  
+  .grants-card .grant-amount {
+    font-weight: bold;
+    color: #333; /* Dark color for the amount */
+  }
+  
