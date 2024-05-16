@@ -17,7 +17,10 @@ import Whatsapp from "../marketing/whatsapp";
 import Join from "../cashiers/join";
 import Create from "../cashiers/create";
 import Prof from "../user/Prof";
-import Dash from "../cashier/DASHBOARD"
+import Dash from "../cashier/DASHBOARD";
+import Deposit from "../payments/deposit";
+import Crypto from "../payments/deposit/crypto"
+import Withdraw from "../payments/withdraw";
 
 const Main = () => {
   const isLoggedIn = false; // Assume the user is not logged in
@@ -48,7 +51,10 @@ const Main = () => {
           <Route path="/cashiers/create" element={<Create/>} />
           <Route path="/user/prof" element={<Prof/>} />
           <Route path="/cashier/dashboard" element={<Dash/>} />
-        </Routes>
+          <Route path="/payments/deposit" element={<Deposit/>} />
+          <Route path="/payments/deposit/crypto" element={<Crypto/>} />
+          <Route path="/payments/withdraw" element={<Withdraw/>} />
+        </Routes> 
       </div>
     </>
   );

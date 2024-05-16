@@ -1,0 +1,53 @@
+.crypto-page {
+    max-width: 550px;
+    height: 900px;
+    margin: 0 auto;
+    padding: 20px;
+  
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+  
+    .crypto-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 80%;
+      margin: 0 auto;
+  
+      .crypto-option {
+        width: 100%;
+        background-color: #f0f0f0; // Default background color
+        border-radius: 8px;
+        padding: 20px;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+  
+        &:nth-child(2) {
+          background-color: #e6e6e6; // Second card background color
+        }
+  
+        &:nth-child(3) {
+          background-color: #cccccc; // Third card background color
+        }
+  
+        .icon {
+          width: 40px; // Adjust icon size as needed
+          height: 40px; // Adjust icon size as needed
+        }
+  
+        .name {
+          margin-left: 10px;
+        }
+  
+        .svg {
+          margin-left: auto;
+          width: 20px; // Adjust svg size as needed
+          height: 20px; // Adjust svg size as needed
+        }
+      }
+    }
+  }
+  
