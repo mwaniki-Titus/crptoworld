@@ -5,7 +5,7 @@ import { poolRequest, sql } from "../utils/dbConnect.js";
 
 export const registerUserService = async (newUser) => {
   try {
-    const hashedPassword = await bcrypt.hash(newUser.Password, 10); // Hashing the password before storing
+    const hashedPassword = await bcrypt.hash(newUser.Password, 10);
     const newRegisteredUser = await poolRequest()
       .input("Username", sql.VarChar(255), newUser.Username)
       .input("Email", sql.VarChar(255), newUser.Email)
@@ -17,7 +17,7 @@ export const registerUserService = async (newUser) => {
     return newRegisteredUser;
   } catch (error) {
     logger.error("Error while registering:", error);
-    return { error: "Error while registering new user" };
+    throw error;
   }
 };
 
@@ -36,14 +36,14 @@ export const authenticateLoginUserService = async (user) => {
         }, process.env.SECRET_KEY, { expiresIn: "24h" });
         return { user: userRecord, token: `JWT ${token}` };
       } else {
-        return { error: 'Invalid credentials' };
+        throw new Error('Invalid credentials');
       }
     } else {
-      return { error: "User not found" };
+      throw new Error("User not found");
     }
   } catch (error) {
     logger.error("Login Error:", error);
-    return { error: "Error while authenticating user" };
+    throw error;
   }
 };
 
@@ -58,13 +58,13 @@ export const updateUserService = async (updateUser) => {
     return updatedUser;
   } catch (error) {
     logger.error("Error while updating user:", error);
-    return { error: "Error while updating user" };
+    throw error;
   }
 };
 
 export const updatePasswordService = async (updatePassword) => {
   try {
-    const hashedPassword = await bcrypt.hash(updatePassword.Password, 10); // Hashing the new password before updating
+    const hashedPassword = await bcrypt.hash(updatePassword.Password, 10);
     const updatedPassword = await poolRequest()
       .input("UserID", sql.Int, updatePassword.UserID)
       .input("Password", sql.VarChar(255), hashedPassword)
@@ -73,7 +73,7 @@ export const updatePasswordService = async (updatePassword) => {
     return updatedPassword;
   } catch (error) {
     logger.error("Error while updating password:", error);
-    return { error: "Error while updating password" };
+    throw error;
   }
 };
 
@@ -86,7 +86,7 @@ export const getSingleUserService = async (UserID) => {
     return singleUser;
   } catch (error) {
     logger.error("Error while retrieving single user:", error);
-    return { error: "Error while retrieving single user" };
+    throw error;
   }
 };
 
@@ -97,6 +97,6 @@ export const getAllUsersService = async () => {
     return allUsers;
   } catch (error) {
     logger.error("Error while retrieving all users:", error);
-    return { error: "Error while retrieving all users" };
+    throw error;
   }
 };

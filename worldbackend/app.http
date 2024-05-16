@@ -1,0 +1,86 @@
+###  
+GET http://localhost:5000/api/users/all
+
+
+### register user
+POST http://localhost:5000/api/users/register
+Content-Type: application/json
+
+{
+  "Username": "example_user",
+  "Email": "user@example.com",
+  "Password": "password123"
+}
+
+### Login user
+POST http://localhost:5000/api/user/login
+Content-Type: application/json
+
+{
+  "Email": "user@example.com",
+  "Password": "password123"
+}
+
+
+### Login user
+PUT http://localhost:5000/api/users/:UserID/update
+Content-Type: application/json
+{
+  "Username": "updated_user",
+  "Balance": 500.00
+}
+
+### Login user
+PUT http://localhost:5000/api/users/:UserID/updatePassword
+Content-Type: application/json
+{
+  "Password": "newpassword123"
+}
+
+GET http://localhost:5000/api/users/:UserID
+
+### 
+POST http://localhost:5000/api/create
+Content-Type: application/json
+
+{
+    "SenderID": 1, 
+    "ReceiverID": 2, 
+    "Amount": 100
+}
+
+###
+GET http://localhost:5000/api/all/transactions
+
+
+
+###
+POST http://localhost:5000/api/create/payment
+Content-Type: application/json
+
+{
+    "UserID": 1,
+    "MerchantID": 4,
+    "Amount": 50.00,
+    "Currency": "USD",
+    "PaymentGateway": "plisio",
+    "PaymentStatus": "Success"
+ }
+
+###
+GET http://localhost:5000/api/all/payments
+
+
+
+###
+POST http://localhost:5000/api/create/grant
+Content-Type: application/json
+ 
+ {
+    "GrantorID": 3,
+    "GranteeID": 1,
+    "Privilege": "admin"
+  }
+
+###
+GET http://localhost:5000/api/all/grants
