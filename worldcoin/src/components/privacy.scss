@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree&display=swap');
+
+body {
+  font-family: 'Figtree', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+.privacy-page {
+margin-top: 10%;
+width: 400px; /* Set the width of the page */
+height: auto; /* Set the height of the page */
+margin: 0 auto; /* Center the page horizontally */
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+margin-bottom: 20px;
+}
+  
+  .privacy-title {
+
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .privacy-subtitle {
+
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .privacy-introduction {
+   //idk yet
+  }
+  
+  .privacy-info-heading {
+    // Styles for the headings of information sections
+    font-weight: bold;
+  }
+  
+  .privacy-info-list {
+    // Styles for the lists of information sections
+    list-style-type: disc;
+    margin-left: 20px;
+  }
+  
+  .privacy-info {
+    // Styles for the information paragraphs
+  }
+  
+  .privacy-back-link {
+   text-align: center;
+     }
+  

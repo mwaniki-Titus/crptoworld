@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree&display=swap');
+
+body {
+  font-family: 'Figtree', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+.page {
+    max-width: 400px;
+    max-height: 488px;
+    margin: 0 auto;
+    font-family: 'Figtree', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    background-color: rgb(255, 255, 255); 
+    padding: 20px; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  }
+  
+  .page img {
+    display: block;
+    margin: 0 auto;
+    max-width: 15%;
+    margin-top: 50px;
+  }
+  
+  .page h2 {
+    text-align: center;
+    font-size: 37px;
+  }
+  
+  .page p {
+    text-align: center;
+  }
+  
+  .page form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 350px;
+    margin-left: 25px;
+  }
+  
+  .page input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+
+  }
+  .page {
+    // Other styles...
+  
+    .forgot-create-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 10px; 
+    }
+  
+    .forgot-password {
+      margin: 0;
+      margin-left: -100px;
+    }
+  
+    .checkbox-wrapper {
+        display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 7px;;
+    }
+
+    input[type="checkbox"] {
+        margin-left: -121px;
+        }
+
+    .create-account {
+      text-align: center; 
+      margin-top: 20px; 
+    }
+  }
+  
+  
+  .page button {
+    background-color: #333639;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .page button:hover {
+    background-color: #3e4c5c;
+  }
+  
+  // Style the links
+  .page a {
+    color: #6c747d;
+    text-decoration: none;
+  }
+  
+  .page a:hover {
+    text-decoration: underline;
+  }
+  

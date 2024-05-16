@@ -1,0 +1,49 @@
+.terms-page {
+    width: 400px; /* Set the width of the page */
+    height: auto; /* Set the height of the page */
+    margin: 0 auto; /* Center the page horizontally */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Space evenly between elements */
+  }
+  
+  .terms-title {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .terms-subtitle {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .terms-introduction {
+    /* Styles for the introduction paragraph */
+  }
+  
+  .terms-important {
+    font-weight: bold;
+  }
+  
+  .terms-important-list {
+    list-style-type: disc;
+    margin-left: 20px;
+  }
+  
+  .terms-key-points {
+    font-weight: bold;
+  }
+  
+  .terms-key-points-list {
+    list-style-type: disc;
+    margin-left: 20px;
+  }
+  
+  .terms-disclaimer {
+    /* Styles for the disclaimer paragraph */
+  }
+  
+  .terms-back-link {
+    text-align: center; /* Center the back to login link */
+  }
+  

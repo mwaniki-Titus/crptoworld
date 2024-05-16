@@ -1,0 +1,50 @@
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 50px); /* Adjust the space on the sides */
+  max-width: 576px; /* Maximum width for phone screen */
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end; /* Align items to the bottom */
+  padding: 10px 0;
+  background-color: white;
+  box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.1);
+  border-top-left-radius: 20px; /* Curved top-left corner */
+  border-top-right-radius: 20px; /* Curved top-right corner */
+  border-bottom-left-radius: 20px; /* Curved top-left corner */
+  border-bottom-right-radius: 20px; /* Curved top-right corner */
+
+  img {
+    width: 32px; /* Increased image size */
+    height: 32px; /* Increased image size */
+    transition: all 0.3s ease-in-out;
+    border-radius: 8px; /* Add some border-radius for a rounded look */
+  }
+
+  span {
+    font-family: 'San Francisco', sans-serif; /* Setting the font to San Francisco */
+    font-weight: bold; /* Make the font bold */
+    font-size: 12px; /* Adjust font size */
+    color: #6c757d; /* Adjust text color */
+    text-decoration: none; /* Remove underlining */
+    transition: color 0.3s ease-in-out; /* Transition effect for color change */
+    text-align: center; /* Center align the text */
+    display: block; /* Display as block element */
+  }
+
+  a.active img {
+    filter: none; /* Remove blur effect on active page */
+  }
+
+  a.active span {
+    color: #007bff; /* Change text color to blue on active page */
+  }
+
+  img:hover,
+  span:hover {
+    filter: none; /* Remove blur effect on hover */
+    color: #007bff; /* Change text color to blue on hover */
+  }
+}

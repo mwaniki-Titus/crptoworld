@@ -1,0 +1,71 @@
+.balancesection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 540px;
+    margin: 0 auto;
+    margin-top: 50px; 
+    text-align: center;
+    margin-bottom: -60px;
+  }
+  
+  .profile-page__banner {
+    width: 70%;
+    padding: 1rem;
+    background-color: #ffffff;
+    border-radius: 5px;
+    margin-bottom: -65px;
+  }
+  
+  .total-balance {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1%;
+  }
+  
+  .profile-page__banner-text {
+    font-weight: bold;
+    color: #1a1414;
+    margin-bottom: -50px;
+  }
+  
+  .profile-page__banner-amount {
+    font-weight: bold;
+    font-size: 63px;
+  }
+  
+  .icons {
+    display: flex;
+    justify-content: space-between;
+    max-width: 200px;
+    width: 100%;
+    margin-bottom: 100px;
+    margin-top: 1rem; /* Adjust spacing between banner and icons */
+  }
+  
+  .icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .icon-circle {
+    width: 35px; /* Adjust circle size as needed */
+    height: 35px; /* Adjust circle size as needed */
+    border-radius: 50%;
+    background-color: #ccc; /* Gray background color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.5rem; /* Adjust spacing between icon and text */
+  }
+  
+  .icon img {
+    width: 20px; /* Adjust icon size as needed */
+  }
+  
+  .icon p {
+    margin-top: 0.5rem; /* Adjust spacing between icon and text */
+  }
+  

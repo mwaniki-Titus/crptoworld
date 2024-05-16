@@ -1,0 +1,51 @@
+h2{
+  text-align: center;
+  //margin-top: -50px;
+}
+.wl-card {
+  background-color: rgb(255, 255, 255);
+  padding: -10px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  width: 400px; /* Set the width according to your preference */
+  margin-top: 10px;
+  margin: auto;
+  cursor: pointer;
+}
+
+.wl-card:hover {
+  background-color: #ffffff; /* Change background color on hover */
+}
+
+.wl-card .wl-badge {
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
+}
+
+.wl-card .content {
+  flex-grow: 1;
+}
+
+.wl-card .content p {
+  margin: 0;
+}
+
+.wl-card .wl-name {
+  font-size: 18px;
+  font-weight: bold;
+ 
+}
+
+.wl-card .wl-date {
+  font-size: 16px;
+  color: #333; 
+  margin-top: 10px;
+}
+
+.wl-card .wl-amount {
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+}

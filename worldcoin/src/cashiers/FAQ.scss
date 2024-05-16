@@ -1,0 +1,27 @@
+.faq-section {
+    width: 80%;
+    max-width: 567px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+
+    .faq-item {
+        margin-bottom: 10px;
+
+        .question {
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .answer {
+            display: none;
+            margin-top: 10px;
+            padding-left: 20px;
+        }
+
+        &.active {
+            .answer {
+                display: block;
+            }
+        }
+    }
+}
