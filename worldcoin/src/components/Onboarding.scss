@@ -1,0 +1,28 @@
+// VerifyOnline.scss
+
+.verify-online-container {
+  text-align: center;
+  max-width: 544px;
+  margin: 0 auto;
+}
+
+.face-id-image {
+  display: block;
+  margin: 20px auto;
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+.continue-button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 20px;
+  background-color: #007bff; /* Blue background color */
+  color: white;
+  text-decoration: none; /* Remove underline from link */
+  border-radius: 5px;
+}
+
+.continue-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}

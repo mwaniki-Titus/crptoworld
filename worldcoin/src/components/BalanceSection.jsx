@@ -3,6 +3,7 @@ import './balance.scss';
 import DepositIcon from '../assets/deposit.svg';
 import WithdrawIcon from '../assets/withdraw.svg';
 import BuyIcon from '../assets/buy.svg';
+import { Link } from 'react-router-dom';
 
 const BalanceSection = () => {
   return (
@@ -14,26 +15,27 @@ const BalanceSection = () => {
         </div>
       </div>
       <div className="icons">
-        <div className="icon">
+        <Link to="/payments/deposit" className="icon">
           <div className="icon-circle">
             <img src={DepositIcon} alt="Deposit" />
           </div>
           <p>Deposit</p>
-        </div>
-        <div className="icon">
+        </Link>
+        <Link to="/payments/withdraw" className="icon">
           <div className="icon-circle">
             <img src={WithdrawIcon} alt="Withdraw" />
           </div>
           <p>Withdraw</p>
-        </div>
-        <div className="icon">
+        </Link>
+        <Link to="/cashiers" className="icon">
           <div className="icon-circle">
             <img src={BuyIcon} alt="Buy" />
           </div>
           <p>Buy</p>
-        </div>
+        </Link>
       </div>
     </div>
+    
   );
 };
 

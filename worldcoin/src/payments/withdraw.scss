@@ -1,0 +1,137 @@
+.wt-withdraw-page {
+  max-width: 550px;
+  height: auto;
+  margin: 0 auto;
+  padding: 30px;
+
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .wt-withdraw-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .wt-withdraw-option-1 {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 8px;
+    height: 150px; 
+
+    .wt-top-content-1 {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      .wt-left-content-1 {
+        display: flex;
+        align-items: center;
+
+        .wt-name-1 {
+          font-weight: bold;
+          font-size: 1.2rem;
+          margin-right: 10px;
+          color: aliceblue;
+          margin-bottom: 10px;
+        }
+
+        .wt-favicon-1 {
+          width: 40px;
+          height: 40px;
+          margin-left: 0px;
+        
+        }
+      }
+
+      .wt-right-content-1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        justify-content: center; 
+
+        .wt-balance-1,
+        .wt-amount-1 {
+          font-size: 0.9rem;
+          color: aliceblue;
+    
+        }
+      }
+    }
+  }
+
+  .wt-withdraw-option-2 {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 8px;
+
+    .wt-top-content-2 {
+      .wt-message-2 {
+        font-weight: bold;
+        color: #353D47;
+      }
+    }
+
+    .wt-bottom-content-2 {
+      .wt-merchant-link-2 {
+        color: blue;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  
+}
+  
+.exchange-1,
+.exchange-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  text-align: left;
+  width: 80%;
+
+  img {
+    width: 30px; // Adjust icon size as needed
+    height: 30px; // Adjust icon size as needed
+    margin-right: 10px;
+  }
+
+  span {
+    font-size: 0.9rem;
+    cursor: pointer; // Make text clickable
+  }
+
+  .unavailable-text {
+    color: rgb(212, 185, 185);
+  }
+   .available-text {
+    color:black;
+  }
+
+  .greater-1 {
+    width: 20px; // Adjust icon size as needed
+    height: 20px; // Adjust icon size as needed
+  }
+}
+
+.exchange-1 {
+  background-color: rgb(227, 206, 206); // Red background for first option
+}
+
+.exchange-option {
+  background-color: rgb(205, 220, 205); // Green background for second option
+margin-left: 10px;
+}
