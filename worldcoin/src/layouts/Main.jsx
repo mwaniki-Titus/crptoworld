@@ -21,6 +21,8 @@ import Dash from "../cashier/DASHBOARD";
 import Deposit from "../payments/deposit";
 import Crypto from "../payments/deposit/crypto"
 import Withdraw from "../payments/withdraw";
+import Onboarding from "../components/onboarding";
+import Verify from "../onboarding/verify";
 
 const Main = () => {
   const isLoggedIn = false; // Assume the user is not logged in
@@ -54,6 +56,8 @@ const Main = () => {
           <Route path="/payments/deposit" element={<Deposit/>} />
           <Route path="/payments/deposit/crypto" element={<Crypto/>} />
           <Route path="/payments/withdraw" element={<Withdraw/>} />
+          <Route path="/onboarding" element={<Onboarding/>} />
+          <Route path="/onboarding/verify" element={<Verify/>} />
         </Routes> 
       </div>
     </>
