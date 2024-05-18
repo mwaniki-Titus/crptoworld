@@ -12,6 +12,7 @@ CREATE TABLE tbl_user (
 );
 
 select * from tbl_user
+drop table tbl_user
 
 -- Grants table
 CREATE TABLE grants (
@@ -26,6 +27,7 @@ CREATE TABLE grants (
 );
 
 select * from  grants
+drop table grants
 
 -- Transactions table
 CREATE TABLE transactions (
@@ -39,6 +41,7 @@ CREATE TABLE transactions (
 );
 
 select * from  transactions
+drop table transactions
 
 -- Payment table
 CREATE TABLE payments (
@@ -55,6 +58,7 @@ CREATE TABLE payments (
 );
 
 select * from payments
+drop table payments
 
 -- Insert dummy data into tbl_user
 INSERT INTO tbl_user (Username, Password, Email, Balance, isAdmin)
