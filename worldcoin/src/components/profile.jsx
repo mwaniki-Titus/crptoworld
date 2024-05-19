@@ -7,7 +7,7 @@ import Navbar from '../layouts/Navbar';
 import Footer from '../layouts/Footer';
 
 const Profile = () => {
-  const [isVerified, setIsVerified] = useState(false);
+  const [isVerified, setIsVerified] = useState(true);
 
   return (
     <>

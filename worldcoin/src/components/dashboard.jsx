@@ -12,7 +12,7 @@ import Navbar from '../layouts/Navbar'
 import Footer from '../layouts/Footer'
 
 const Dashboard = () => {
-  const [isCashierVerified, setIsCashierVerified] = useState(true);
+  const [isCashierVerified, setIsCashierVerified] = useState(false);
 
   // Function to handle cashier verification status change
   const handleCashierVerification = () => {
