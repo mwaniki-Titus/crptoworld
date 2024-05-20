@@ -1,6 +1,26 @@
 .trades-container {
     padding: 20px;
     margin-top: 50px;
+    max-width: 544px; /* Limiting the width of the container */
+    margin-left: auto; /* Centering the container horizontally */
+    margin-right: auto; /* Centering the container horizontally */
+
+    .trade-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        .trade-item {
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #f4f4f4;
+            border-radius: 5px;
+
+            p {
+                margin: 0;
+            }
+        }
+    }
 }
 
 .no-data {
@@ -8,14 +28,17 @@
     flex-direction: column;
     align-items: center;
     margin-top: 20px;
-}
 
-.no-data img {
-    width: 544px; 
-    height: 100px; 
-    margin-bottom: 10px;
-}
+    img {
+        width: 100%; /* Adjusting image width to fit the container */
+        max-width: 544px; /* Limiting the image width */
+        height: auto; /* Maintaining aspect ratio */
+        margin-bottom: 10px;
+    }
 
-.no-data p {
-    color: #777;
+    p {
+        color: #777;
+        max-width: 544px; /* Limiting the text width */
+        text-align: center; /* Centering the text */
+    }
 }

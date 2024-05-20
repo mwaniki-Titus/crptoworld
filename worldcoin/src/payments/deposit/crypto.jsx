@@ -4,9 +4,13 @@ import litecoinIcon from '../../assets/litecoin.svg'; // Import Litecoin icon im
 import tetherIcon from '../../assets/tether.svg'; // Import Tether icon image
 import GreaterBlack from '../../assets/greaterblack.svg';
 import './crypto.scss';
+import TopBar from '../../layouts/Topbar'
+
 
 const CryptoPage = () => {
   return (
+    <>
+    <TopBar/>
     <div className="crypto-page">
       <h2>Select Network</h2>
       <div className="crypto-card">
@@ -27,6 +31,7 @@ const CryptoPage = () => {
         </div>
       </div>
     </div>
+    </>
   );
 }
 

@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import './create.scss';
+import TopBar from '../layouts/Topbar'
+
 
     const CreateCashier = () => {
         // State variables for form inputs
@@ -50,6 +52,8 @@ import './create.scss';
         };
       
         return (
+          <>
+          <TopBar/>
           <div className="create-container">
             <h2>Create P2P Cashier</h2>
             <form onSubmit={handleSubmit}>
@@ -86,6 +90,7 @@ import './create.scss';
         <button type="submit">Become A Cashier</button>
       </form>
     </div>
+    </>
   );
 };
 
