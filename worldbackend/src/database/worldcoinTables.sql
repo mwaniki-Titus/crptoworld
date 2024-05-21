@@ -59,28 +59,3 @@ CREATE TABLE payments (
 
 select * from payments
 drop table payments
-
--- Insert dummy data into tbl_user
-INSERT INTO tbl_user (Username, Password, Email, Balance, isAdmin)
-VALUES 
-    ('user1', 'password1', 'user1@example.com', 100.00, 0),
-    ('user2', 'password2', 'user2@example.com', 200.00, 0),
-    ('admin1', 'adminpass1', 'admin1@example.com', 0.00, 1);
-
--- Insert dummy data into grants
-INSERT INTO grants (GrantorID, GranteeID, Privilege)
-VALUES 
-    (3, 1, 'Admin Access'),
-    (3, 2, 'Transaction Access');
-
--- Insert dummy data into transactions
-INSERT INTO transactions (SenderID, ReceiverID, Amount)
-VALUES 
-    (1, 2, 50.00),
-    (2, 1, 30.00);
-
--- Insert dummy data into payments
-INSERT INTO payments (UserID, MerchantID, Amount, Currency, PaymentGateway, PaymentStatus)
-VALUES 
-    (1, NULL, 50.00, 'USD', 'Plisio', 'Completed'),
-    (2, 3, 30.00, 'EUR', 'Plisio', 'Pending');

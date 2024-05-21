@@ -1,4 +1,3 @@
-
 import logger from "../utils/logger.js";
 import {
   registerUserService,
@@ -11,17 +10,19 @@ import {
 import { 
   sendNotFound,
   sendServerError,
-  } from '../helpers/helperFunction.js';     
+} from '../helpers/helperFunction.js';     
 
 export const registerUserController = async (req, res) => {
   try {
     const newUser = req.body;
-    const result = await registerUserService(newUser);
+    const isAdmin = newUser.isAdmin || false; 
+    const result = await registerUserService(newUser, isAdmin);
     logger.info("User registered:", result);
     res.status(201).json(result);
   } catch (error) {
     logger.error("Error registering user:", error);
-    res.status(500).json({ error: "Internal server error" });
+    const errorMessage = error.message || "Internal server error";
+    res.status(400).json({ error: errorMessage });
   }
 };
 
@@ -77,10 +78,10 @@ export const getSingleUserController = async (req, res) => {
 export const getAllUsersController = async (req, res) => {
   try {
     const result = await getAllUsersService();
-    logger.info("All userss retrieved:", result);
+    logger.info("All users retrieved:", result);
     res.status(200).json(result);
   } catch (error) {
-    logger.error("Error retrieving all transactions:", error);
+    logger.error("Error retrieving all users:", error);
     res.status(500).json({ error: "Internal server error" });
   }
 };

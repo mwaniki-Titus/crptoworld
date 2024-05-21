@@ -1,5 +1,3 @@
-// paymentController.js
-
 import { createPaymentService, getAllPaymentsService } from "../services/paymentServices.js";
 import logger from "../utils/logger.js";
 

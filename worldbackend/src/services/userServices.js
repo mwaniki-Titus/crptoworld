@@ -3,15 +3,25 @@ import jwt from "jsonwebtoken";
 import logger from "../utils/logger.js";
 import { poolRequest, sql } from "../utils/dbConnect.js";
 
-export const registerUserService = async (newUser) => {
+export const registerUserService = async (newUser, isAdmin) => {
   try {
+
+    const existingUserResponse = await poolRequest()
+    .input("Email", sql.VarChar(255), newUser.Email)
+    .query("SELECT * FROM tbl_user WHERE Email = @Email");
+
+  if (existingUserResponse.recordset.length > 0) {
+    throw new Error("Email already exists");
+  }
+
     const hashedPassword = await bcrypt.hash(newUser.Password, 10);
     const newRegisteredUser = await poolRequest()
       .input("Username", sql.VarChar(255), newUser.Username)
       .input("Email", sql.VarChar(255), newUser.Email)
       .input("Password", sql.VarChar(255), hashedPassword)
+      .input("isAdmin", sql.Bit, isAdmin)
       .query(
-        "INSERT INTO tbl_user(Username, Email, Password) VALUES(@Username, @Email, @Password)"
+        "INSERT INTO tbl_user(Username, Email, Password, isAdmin) VALUES(@Username, @Email, @Password, @isAdmin)"
       );
     logger.info("New user registered successfully:", newRegisteredUser);
     return newRegisteredUser;
