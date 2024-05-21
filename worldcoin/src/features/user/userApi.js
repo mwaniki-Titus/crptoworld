@@ -5,13 +5,36 @@ export const userApi = createApi({
     baseQuery: fetchBaseQuery({baseUrl:'http://localhost:5000/api/'}),
     tagTypes: ['Users'],
     endpoints: (builder) => ({
-
-        getComments:builder.query({
-            query:() => 'users',
+        getUsers: builder.query({
+            query: () => 'users',
             providesTags: ['Users']
         }),
+        registerUser: builder.mutation({
+            query: (user) => ({
+                url: 'users/register',
+                method: 'POST',
+                body: user
+            }),
+            invalidatesTags: ['Users']
+        }),
+        loginUser: builder.mutation({
+            query: (credentials) => ({
+                url: 'user/login',
+                method: 'POST',
+                body: credentials
+            }),
+            invalidatesTags: ['Users']
+        }),
+        getUserDetails: builder.query({
+            query: (id) => `users/${id}`,
+            providesTags: ['Users']
+        }),
+    })
+});
 
-    
-     })
-})
-export const { useGetUsersQuery,}=userApi
+export const {
+    useGetUsersQuery,
+    useRegisterUserMutation,
+    useLoginUserMutation, 
+    useGetUserDetailsQuery,
+} = userApi;
