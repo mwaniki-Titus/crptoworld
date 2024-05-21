@@ -5,9 +5,13 @@ import GreaterBlack from '../assets/greaterblack.svg';
 import binanceIcon from '../assets/binance.svg'; // Import Binance icon image
 import mpesaIcon from '../assets/mpesa.png';
 import { Link } from 'react-router-dom';
+import TopBar from '../layouts/Topbar'
+
 
 const WithdrawPage = () => {
   return (
+    <>
+    <TopBar/>
     <div className="wt-withdraw-page">
       <h2>Select Platform</h2>
       <div className="wt-withdraw-card">
@@ -33,21 +37,22 @@ const WithdrawPage = () => {
         </div>
 
         <div className="dp-card">
-        <Link to="/payments/withdraw/crypto" className="exchange-1">
-          <img src={binanceIcon} alt="Binance Icon" />
-          <span>Crypto</span>
+        <Link to="/payments/withdraw/Agents" className="exchange-1">
+          <img src={mpesaIcon} alt="Mpesa Icon" />
+          <span>M-Pesa Agent</span>
           <span className="available-text">Available</span>
           <img src={GreaterBlack} alt="Greater White" className="greater-1" />
         </Link>
         <div className="exchange-option">
-          <img src={mpesaIcon} alt="Mpesa Icon" />
-          <span>M-Pesa</span>
+          <img src={binanceIcon} alt="Binance Icon" />
+          <span>Crypto</span>
           <span className="unavailable-text">Unavailable</span>
           <img src={GreaterBlack} alt="Greater White" className="greater-1" />
         </div>
       </div>
       </div>
     </div>
+    </>
   );
 }
 

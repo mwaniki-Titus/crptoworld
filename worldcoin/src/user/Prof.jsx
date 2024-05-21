@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import './Prof.scss';
 import UpdatePasswordForm from './Updatepassword';
 import DeleteAccount from './DeleteAccount';
+import TopBar from '../layouts/Topbar'
+
 
 const UserProfile = () => {
   const [userInfo, setUserInfo] = useState({
@@ -42,7 +44,9 @@ const UserProfile = () => {
   };
 
   return (
+    <>
     <div className="user-profile-container">
+    {<TopBar/>}
       <div className="profile-info-section">
         <h2>Profile Information</h2>
         <p>Update your account's profile information and email address..</p>
@@ -97,6 +101,7 @@ const UserProfile = () => {
         <button onClick={handleDeleteAccount}>DELETE ACCOUNT</button>
       </div>
     </div>
+    </>
   );
 };
 

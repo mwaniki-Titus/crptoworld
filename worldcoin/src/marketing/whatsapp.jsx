@@ -2,9 +2,12 @@ import React from 'react';
 import './whatsapp.scss';
 import WhatsAppLogo from '../assets/whatsapp.svg';
 import CheckMarkIcon from '../assets/checkmark.svg'; // Assuming you have a checkmark icon
+import TopBar from '../layouts/Topbar'
 
 const WhatsAppAds = () => {
     return (
+        <>
+    {<TopBar/>}
         <div className="whatsapp-ads-container">
             <h2>Unlock Earnings with WhatsApp</h2>
             <p>At WorldCoin, we value your support and want to reward you for spreading the word about our amazing service. You can earn real rewards just by sharing our service on your WhatsApp status.</p>
@@ -36,6 +39,7 @@ const WhatsAppAds = () => {
                 </a>
             </div>
         </div>
+        </>
     );
 }
 

@@ -2,6 +2,7 @@ import React from 'react';
 import './cashierDashboard.scss'; // Import the SCSS file
 import Favicon from '../assets/favicon.ico';
 import NoData from '../assets/nodata.svg';
+import TopBar from '../layouts/Topbar'
 
 const CashierDashboard = () => {
   const fullName = "John Doe"; // Example full name
@@ -9,6 +10,7 @@ const CashierDashboard = () => {
 
   return (
     <div className="dashboard-container">
+      {<TopBar/>}
       <div className="header-section">
         <img src={Favicon} alt="Favicon" />
         <div className="user-info">

@@ -3,7 +3,7 @@ import './grants.scss';
 import Badge from '../assets/Badge.png';
 import GreaterBig from '../assets/greaterbig.svg';
 import NoData from '../assets/nodata.svg';
-//import Back from '../layouts/Back'
+import TopBar from '../layouts/Topbar'
 
 const Grants = () => {
   const [claimed, setClaimed] = useState(false);
@@ -15,7 +15,7 @@ const Grants = () => {
 
   return (
     <>
-    {/*<Back/>*/}
+    {<TopBar/>}
     
     <div className="grants-page">
       <h3>Available Grants</h3>

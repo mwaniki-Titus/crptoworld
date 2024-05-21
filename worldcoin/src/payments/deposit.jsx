@@ -4,9 +4,13 @@ import binanceIcon from '../assets/binance.svg'; // Import Binance icon image
 import mpesaIcon from '../assets/mpesa.png'; // Import Mpesa icon image
 import GreaterBlack from '../assets/greaterblack.svg';
 import './deposit.scss';
+import TopBar from '../layouts/Topbar'
+
 
 const DepositPage = () => {
   return (
+    <>
+    <TopBar/>
     <div className="deposit-page">
       <h2>Select Exchange</h2>
       <div className="dp-card">
@@ -24,6 +28,7 @@ const DepositPage = () => {
         </div>
       </div>
     </div>
+    </>
   );
 }
 

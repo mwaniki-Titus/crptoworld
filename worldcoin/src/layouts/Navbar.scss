@@ -4,17 +4,17 @@
     left: 50%;
     transform: translateX(-50%);
     width: calc(100% - 50px); /* Adjust the space on the sides */
-    max-width: 576px; /* Maximum width for phone screen */
+    max-width: 576px; 
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px;
     background-color: #ffffff;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-    border-top-left-radius: 20px; /* Curved top-left corner */
-    border-top-right-radius: 20px; /* Curved top-right corner */
-    border-bottom-left-radius: 20px; /* Curved top-left corner */
-    border-bottom-right-radius: 20px; /* Curved top-right corner */
+    border-top-left-radius: 20px; 
+    border-top-right-radius: 20px; 
+    border-bottom-left-radius: 20px; 
+    border-bottom-right-radius: 20px;
   }
   
   .navbar img {

@@ -6,11 +6,14 @@ import HelpIcon from '../assets/help.svg';
 import AccountIcon from '../assets/account.svg';
 import JoinImage from '../assets/join.jpg'; 
 import FAQ from './faq';
+import TopBar from '../layouts/Topbar'
+
 
 const JoinCashiers = () => {
 
   return (
     <div className="join-container">
+      <TopBar/>
       <div className="join-section first-section">
         <h2>Become a payment agent on Worldcoin</h2>
         <p>
