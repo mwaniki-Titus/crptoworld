@@ -26,9 +26,9 @@ const CreateAccount = () => {
       
       const response = await registerUser({ Username: firstName, Email: email, Password: password, isAdmin: false }).unwrap();
       console.log('Registration response:', response); 
-      if (isSuccess) {
-        
-        localStorage.setItem('user', JSON.stringify(data));
+      
+      if (response) {
+        localStorage.setItem('user', JSON.stringify(response));
         navigate('/login');
       }
     } catch (err) {

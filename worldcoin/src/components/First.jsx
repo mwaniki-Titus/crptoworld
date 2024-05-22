@@ -10,7 +10,7 @@ function First() {
         <img src={Logo} alt="Worldcoin Logo" className="custom-logo" />
       </header>
       <div className="custom-page">
-        <h1 className="custom-heading">Introducing Worldcoin Mining</h1>
+        <h1 className="custom-heading">Introducing Worldcoin Online orb Verification</h1>
         <p className="custom-paragraph">
           Worldcoin, an online platform, allows you to establish a distinctive digital identity by scanning your iris using an orb camera. Accessing the Worldcoin wallet is granted upon creating an account through the Worldcoin app or website.
         </p>

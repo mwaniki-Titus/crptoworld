@@ -21,7 +21,7 @@ const Login = () => {
         localStorage.setItem('token', result.token);
         localStorage.setItem('user', JSON.stringify(result.user));
         console.log('Login successful'); // Add console log
-        navigate('/Home'); // Change to the appropriate route after successful login
+        navigate('/Home'); 
       }
     } catch (err) {
       console.error('Login failed:', err);
