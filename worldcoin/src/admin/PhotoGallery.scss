@@ -1,0 +1,43 @@
+.photo-gallery {
+    margin-left: 165px;
+    padding: 20px;
+    background-color: #f9f9f9;
+  
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+  
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+  
+    .gallery-item {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      width: 200px;
+      text-align: center;
+  
+      .kyc-photo {
+        width: 100%;
+        height: auto;
+      }
+  
+      .user-info {
+        padding: 10px;
+  
+        h3 {
+          margin: 0;
+          color: #555;
+        }
+      }
+    }
+  }
+  

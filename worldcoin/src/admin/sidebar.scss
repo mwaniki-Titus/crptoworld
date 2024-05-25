@@ -1,0 +1,44 @@
+.sidebar {
+    width: 150px;
+    background-color: #f7f7f7;
+    height: auto;
+    position: fixed;
+  
+    &__header {
+      text-align: center;
+      font-size: 14px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+  
+    &__nav {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    &__link {
+      display: flex;
+      align-items: center;
+      padding: 10px 15px;
+      color: #333;
+      text-decoration: none;
+      font-size: 12px;
+      margin-bottom: 10px;
+      transition: background-color 0.3s, color 0.3s;
+  
+      i {
+        margin-right: 10px;
+      }
+  
+      &:hover {
+        background-color: #e7e7e7;
+        color: #333;
+      }
+  
+      &.active {
+        background-color: #7b63f1;
+        color: white;
+      }
+    }
+  }
+  

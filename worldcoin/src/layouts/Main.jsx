@@ -28,9 +28,16 @@ import Cashiers from "../components/cashiers";
 import AgentPage from "../components/AgentPage"; // Import the AgentPage 
 import AgentWithdraw from "../components/AgentWithdraw";
 import Agents from "../components/Agents";
+import AdminDashbord from "../admin/Dashboard";
+import AdminUsers from "../admin/users";
+import AdminGrants from "../admin/Grants";
+import AdminAgents from "../admin/Agents";
+import AdminSusUsers from "../admin/referrals";
+import AdminLogin from "../admin/AdminLogin";
+import PhotoGallery from "../admin/PhotoGallery";
 
 const Main = () => {
-  const isLoggedIn = false; // Assume the user is not logged in
+  const isLoggedIn = false; 
 
   return (
     <div className="mainContent">
@@ -66,6 +73,13 @@ const Main = () => {
         <Route path="/trades/:agentName" element={<AgentPage />} /> {/* Add this route */}
         <Route path="/payments/withdraw/Agents" element={<Agents />} />
         <Route path="/trade/:agentName" element={<AgentWithdraw />} />
+        <Route path="/admin/dashboard" element={<AdminDashbord />} />
+        <Route path="/admin/users" element={<AdminUsers />} />
+        <Route path="/admin/grants" element={<AdminGrants />} />
+        <Route path="/admin/agents" element={<AdminAgents />} />
+        <Route path="/admin/referrals" element={<AdminSusUsers />} />
+        <Route path="/admin/login" element={<AdminLogin />} />
+        <Route path="/admin/photo-gallery" element={<PhotoGallery />} />
       </Routes>
     </div>
   );
