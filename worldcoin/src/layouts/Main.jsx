@@ -25,7 +25,7 @@ import Onboarding from "../components/onboarding";
 import Verify from "../onboarding/verify";
 import Cashiers from "../components/cashiers";
 //import CashierPage from "../components/CashierPage";
-import AgentPage from "../components/AgentPage"; // Import the AgentPage 
+import AgentPage from "../components/AgentPage";
 import AgentWithdraw from "../components/AgentWithdraw";
 import Agents from "../components/Agents";
 import AdminDashbord from "../admin/Dashboard";
@@ -70,7 +70,7 @@ const Main = () => {
         <Route path="/onboarding" element={<Onboarding />} />
         <Route path="/onboarding/verify" element={<Verify />} />
         <Route path="/cashiers" element={<Cashiers />} />
-        <Route path="/trades/:agentName" element={<AgentPage />} /> {/* Add this route */}
+        <Route path="/trades/:agentName" element={<AgentPage />} />
         <Route path="/payments/withdraw/Agents" element={<Agents />} />
         <Route path="/trade/:agentName" element={<AgentWithdraw />} />
         <Route path="/admin/dashboard" element={<AdminDashbord />} />
