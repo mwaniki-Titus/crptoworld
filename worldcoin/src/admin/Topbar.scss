@@ -1,0 +1,46 @@
+.dashboard {
+    margin-left: 150px;
+      .header {
+        background-color: #7b63f1;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: white;
+        
+        &__title {
+          margin: 0;
+          font-size: 24px;
+        }
+        
+        &__user {
+          display: flex;
+          align-items: center;
+          
+          &-info {
+            display: flex;
+            align-items: center;
+          }
+          
+          &-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-left: 10px;
+          }
+          
+          &-name {
+            margin-left: 10px;
+          }
+          
+          &-button {
+            background-color: black;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+          }
+        }
+      }
+    }
