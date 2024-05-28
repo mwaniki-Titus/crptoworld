@@ -1,5 +1,7 @@
 CREATE DATABASE worldcoin
 USE worldcoin
+
+
 -- Users table
 CREATE TABLE tbl_user (
     UserID INT IDENTITY(1,1) PRIMARY KEY,
@@ -8,8 +10,12 @@ CREATE TABLE tbl_user (
     Email VARCHAR(255) NOT NULL,
     Balance DECIMAL(18, 2) NOT NULL DEFAULT 0,
     CreatedAt DATETIME DEFAULT GETDATE(),
-    isAdmin BIT DEFAULT 0 NOT NULL 
+    isAdmin BIT DEFAULT 0 NOT NULL,
+    ReferrerID INT NULL,
+    FOREIGN KEY (ReferrerID) REFERENCES tbl_user(UserID)
 );
+
+
 
 select * from tbl_user
 drop table tbl_user
@@ -20,10 +26,10 @@ CREATE TABLE grants (
     GrantorID INT NOT NULL,
     GranteeID INT NOT NULL, 
     Privilege VARCHAR(50) NOT NULL, 
+    GrantAmount DECIMAL(18, 2) NOT NULL,
     GrantTimestamp DATETIME DEFAULT GETDATE(),
     FOREIGN KEY (GrantorID) REFERENCES tbl_user(UserID),
-    FOREIGN KEY (GranteeID) REFERENCES tbl_user(UserID) ,
-
+    FOREIGN KEY (GranteeID) REFERENCES tbl_user(UserID)
 );
 
 select * from  grants
@@ -59,3 +65,19 @@ CREATE TABLE payments (
 
 select * from payments
 drop table payments
+
+
+-- Referrals table
+CREATE TABLE referrals (
+    ReferralID INT IDENTITY(1,1) PRIMARY KEY,
+    ReferrerID INT NOT NULL,
+    ReferredID INT NULL,
+    ReferralCode VARCHAR(50) NOT NULL UNIQUE,
+    ReferralTimestamp DATETIME DEFAULT GETDATE(),
+    FOREIGN KEY (ReferrerID) REFERENCES tbl_user(UserID),
+    FOREIGN KEY (ReferredID) REFERENCES tbl_user(UserID)
+);
+
+
+select * from referrals
+drop table referrals

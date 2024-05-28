@@ -110,3 +110,29 @@ export const getAllUsersService = async () => {
     throw error;
   }
 };
+
+export const deleteUserService = async (UserID) => {
+  try {
+    const deletedUser = await poolRequest()
+      .input('UserID', sql.Int, UserID)
+      .query('DELETE FROM tbl_user WHERE UserID = @UserID');
+    console.log('User deleted successfully:', deletedUser);
+    return deletedUser;
+  } catch (error) {
+    console.error('Error deleting user:', error);
+    throw error;
+  }
+};
+
+export const suspendUserService = async (UserID) => {
+  try {
+    const suspendedUser = await poolRequest()
+      .input('UserID', sql.Int, UserID)
+      .query('UPDATE tbl_user SET Status = "suspended" WHERE UserID = @UserID');
+    console.log('User suspended successfully:', suspendedUser);
+    return suspendedUser;
+  } catch (error) {
+    console.error('Error suspending user:', error);
+    throw error;
+  }
+};

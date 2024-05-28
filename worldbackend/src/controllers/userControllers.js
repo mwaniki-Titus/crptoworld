@@ -6,6 +6,8 @@ import {
   updatePasswordService,
   getSingleUserService,
   getAllUsersService,
+  deleteUserService,
+  suspendUserService
 } from "../services/userServices.js";
 import { 
   sendNotFound,
@@ -83,5 +85,28 @@ export const getAllUsersController = async (req, res) => {
   } catch (error) {
     logger.error("Error retrieving all users:", error);
     res.status(500).json({ error: "Internal server error" });
+  }
+};
+
+
+export const deleteUserController = async (req, res) => {
+  const { UserID } = req.params;
+  try {
+    await deleteUserService(UserID);
+    res.status(200).send({ message: 'User deleted successfully' });
+  } catch (error) {
+    console.error('Error deleting user:', error);
+    res.status(500).send({ error: 'Internal server error' });
+  }
+};
+
+export const suspendUserController = async (req, res) => {
+  const { UserID } = req.params;
+  try {
+    await suspendUserService(UserID);
+    res.status(200).send({ message: 'User suspended successfully' });
+  } catch (error) {
+    console.error('Error suspending user:', error);
+    res.status(500).send({ error: 'Internal server error' });
   }
 };

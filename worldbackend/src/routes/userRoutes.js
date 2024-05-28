@@ -7,10 +7,11 @@ import {
   updatePasswordController,
   getSingleUserController,
   getAllUsersController,
+  deleteUserController,
+  suspendUserController
 } from '../controllers/userControllers.js';
 
 const userRouter = Router();
-
 
 userRouter.post('/users/register', registerUserController);
 userRouter.post('/user/login', loginUserController);
@@ -18,5 +19,7 @@ userRouter.put('/:UserID/update', updateUserController);
 userRouter.put('/:UserID/updatePassword', updatePasswordController);
 userRouter.get('/:UserID', getSingleUserController);
 userRouter.get('/users/all', getAllUsersController);
+userRouter.delete('/users/:UserID/delete', deleteUserController);
+userRouter.put('/users/:UserID/suspend', suspendUserController);
 
 export default userRouter;

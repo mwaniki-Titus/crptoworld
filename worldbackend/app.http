@@ -1,5 +1,13 @@
-###  
+### 
 GET http://localhost:5000/api/users/all
+
+### 
+DELETE  http://localhost:5000/api/users/5/delete
+
+
+### 
+DELETE  http://localhost:5000/api/users/5/suspend
+
 
 
 ### register user
@@ -7,8 +15,8 @@ POST http://localhost:5000/api/users/register
 Content-Type: application/json
 
 {
-  "Username": "Tito",
-  "Email": "user@exa.com",
+  "Username": "leo",
+  "Email": "leo@exa.com",
   "Password": "password1",
   "isAdmin": true
 }
@@ -44,8 +52,8 @@ POST http://localhost:5000/api/create
 Content-Type: application/json
 
 {
-    "SenderID": 1, 
-    "ReceiverID": 2, 
+    "SenderID": 2, 
+    "ReceiverID": 4, 
     "Amount": 100
 }
 
@@ -72,16 +80,20 @@ Content-Type: application/json
 GET http://localhost:5000/api/all/payments
 
 
-
 ###
 POST http://localhost:5000/api/create/grant
 Content-Type: application/json
- 
- {
-    "GrantorID": 3,
-    "GranteeID": 1,
-    "Privilege": "admin"
-  }
+
+{
+    "GrantorID": 2,
+    "GranteeID": 3,
+    "Privilege": "admin",
+    "GrantAmount": 179.00
+}
 
 ###
 GET http://localhost:5000/api/all/grants
+
+
+###
+GET http://localhost:5000/api/grant/3

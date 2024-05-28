@@ -1,5 +1,6 @@
-import { createGrantService, getAllGrantsService } from "../services/grantsServices.js";
+import { createGrantService, getAllGrantsService, getGrantByIdService } from "../services/grantsServices.js";
 import logger from "../utils/logger.js";
+
 
 export const createGrantController = async (req, res) => {
   try {
@@ -21,5 +22,15 @@ export const getAllGrantsController = async (req, res) => {
   } catch (error) {
     logger.error("Error retrieving all grants:", error);
     res.status(500).json({ error: "Internal server error" });
+  }
+};
+
+export const getGrantByIdController = async (req, res) => {
+  try {
+    const { grantId } = req.params;
+    const grant = await getGrantByIdService(grantId);
+    res.status(200).json(grant);
+  } catch (error) {
+    res.status(404).json({ error: error.message });
   }
 };
