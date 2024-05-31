@@ -6,7 +6,7 @@ export const userApi = createApi({
     tagTypes: ['Users'],
     endpoints: (builder) => ({
         getUsers: builder.query({
-            query: () => 'users',
+            query: () => 'users/all',
             providesTags: ['Users']
         }),
         registerUser: builder.mutation({
@@ -29,6 +29,20 @@ export const userApi = createApi({
             query: (id) => `users/${id}`,
             providesTags: ['Users']
         }),
+        deleteUser: builder.mutation({
+            query: (userID) => ({
+                url: `users/${userID}/delete`,
+                method: 'DELETE'
+            }),
+            invalidatesTags: ['Users']
+        }),
+        suspendUser: builder.mutation({
+            query: (userID) => ({
+                url: `users/${userID}/suspend`,
+                method: 'PUT'
+            }),
+            invalidatesTags: ['Users']
+        }),
     })
 });
 
@@ -37,4 +51,7 @@ export const {
     useRegisterUserMutation,
     useLoginUserMutation, 
     useGetUserDetailsQuery,
+    useDeleteUserMutation,
+    useSuspendUserMutation
 } = userApi;
+
