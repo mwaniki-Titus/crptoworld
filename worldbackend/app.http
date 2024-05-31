@@ -97,3 +97,39 @@ GET http://localhost:5000/api/all/grants
 
 ###
 GET http://localhost:5000/api/grant/3
+
+
+###
+GET http://localhost:5000/api/
+
+###
+POST http://localhost:5000/api/create/referrals
+Content-Type: application/json
+
+{
+  "referrerID": 2,
+  "referralCode": "AJX124",
+  "referredID": 4
+}
+
+
+###
+PUT http://localhost:5000/api/update/referrals
+Content-Type: application/json
+
+{
+    "referralCode": "AHC124",
+    "referredID": 2
+}
+
+
+###
+GET http://localhost:5000/api/referrals/ABC123
+
+###
+GET http://localhost:5000/api/all/referrals
+
+
+###
+GET http://localhost:5000/api/referrals/user/2
+

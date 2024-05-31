@@ -22,4 +22,5 @@ userRouter.get('/users/all', getAllUsersController);
 userRouter.delete('/users/:UserID/delete', deleteUserController);
 userRouter.put('/users/:UserID/suspend', suspendUserController);
 
+
 export default userRouter;

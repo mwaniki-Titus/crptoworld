@@ -8,6 +8,7 @@ import userRouter from './src/routes/userRoutes.js'
 import transactionRouter from './src/routes/transactionRoutes.js'
 import paymentRouter from './src/routes/paymentRoutes.js'
 import grantRouter from './src/routes/grantsRoutes.js'
+import referralRouter from './src/routes/referalRoutes.js'
 
 
 dotenv.config()
@@ -28,7 +29,7 @@ app.use('/api',userRouter)
 app.use('/api', transactionRouter)
 app.use('/api', paymentRouter)
 app.use('/api', grantRouter)
-
+app.use('/api', referralRouter)
 
 
 app.listen(PORT,()=>{
